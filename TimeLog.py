@@ -61,6 +61,14 @@ def delete_Activity(Activity_id):
 
 # Main Streamlit app
 def main():
+    hide_st_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        </style>
+        """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
     st.title('Activity TimeLog')
 
     create_table()
